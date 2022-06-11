@@ -67,3 +67,6 @@
 		// 셔플된 좌표를 가진 큐
 		shuffledOpenTileCoords = new Queue<Coord> (Utility.ShuffleArray (allOpenCoords.ToArray (), currentMap.seed));
 	```
+```python
+print('hello')
+```
