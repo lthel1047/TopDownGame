@@ -1,6 +1,8 @@
 
 Wave 마다 Ai 기능을 다르게 추가할 수 있게 코드 추가
 
+<pre>
+<code> 
 [System.Serializable]
 	public class Wave {
 		public bool infinite;
@@ -13,9 +15,11 @@ Wave 마다 Ai 기능을 다르게 추가할 수 있게 코드 추가
 		public float enemyHealth;
 		public Color skinColur;			// 적 색
 	}
+</pre>
+</code>  
   
-  
-  
+<pre>
+<code>
   // 스폰 되는 위치 가시성 증가
 	IEnumerator SpawnEnemy() {
 		float spawnDelay = 1;
@@ -40,5 +44,8 @@ Wave 마다 Ai 기능을 다르게 추가할 수 있게 코드 추가
 
 		Enemy spawnedEnemy = Instantiate(enemy, spawnTile.position + Vector3.up, Quaternion.identity) as Enemy;
 		spawnedEnemy.OnDeath += OnEnemyDeath;
-		**spawnedEnemy.SetCharacteristics (currentWave.moveSpeed, currentWave.hitsToKillPlayer, currentWave.enemyHealth, currentWave.skinColur);**
+		//추가된 부분
+		spawnedEnemy.SetCharacteristics (currentWave.moveSpeed, currentWave.hitsToKillPlayer, currentWave.enemyHealth, currentWave.skinColur);
 	}
+	</pre>
+</code>
