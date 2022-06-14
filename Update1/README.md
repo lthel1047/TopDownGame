@@ -1,6 +1,9 @@
 먼저 맵과 플레이어 그리고 Ai 스폰 까지 구현 했고 맵은 수정이 편하게 에디터로 제작 / Ai 스폰은 모두 다른 자리에서 나오게 그리고 한눈에 확인이 가능하게 제작.
 맵은 Fisher–Yates shuffle 이용 쉽게 랜덤순열 알고리즘을 이용해 중복되지 않은 맵이 생성되도록 제작 하였습니다.
 
+  
+<pre>
+<code>
 		// 좌표 
 		allTileCoords = new List<Coord> ();
 		for (int x = 0; x < currentMap.mapSize.x; x ++) {
@@ -65,3 +68,6 @@
 		}
 		// 셔플된 좌표를 가진 큐
 		shuffledOpenTileCoords = new Queue<Coord> (Utility.ShuffleArray (allOpenCoords.ToArray (), currentMap.seed));
+
+</pre>
+</code>  
